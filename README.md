@@ -4,7 +4,7 @@ There are 3 sections in order to use Zenbot on AWS:
 
 1. Register AWS Account (need Credit/Debit Card)
 2. Launch Your First Instance (aka your cloud server)
-3. Install Zenbot**
+3. Install Zenbot
 
 
 ## 1. Register AWS Account (need Credit/Debit Card)
@@ -61,7 +61,8 @@ But mongodb version should be 4.4 not 5.0 (if use version 5.0 the installation w
     #if fail eg. ERR gyp, try reinstall node-gyp
 	sudo npm install -g node-gyp
 	#then rerun 3. again
-4. Try this command to test if you can run Zenbot
+4. Start mongodb service. Follow [mongodb website for starting service](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-amazon/)
+5. Try this command to test if you can run Zenbot
 > 
     ./zenbot.sh trade binance.BTC-USDT --paper --buy_pct=20 --sell_pct=20
 If you see the trading UI. You're good to go!
