@@ -2,9 +2,9 @@
 
 There are 3 sections in order to use Zenbot on AWS:
 
-**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Register AWS Account (need Credit/Debit Card)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Launch Your First Instance (aka your cloud server)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Install Zenbot**
+1. Register AWS Account (need Credit/Debit Card)
+2. Launch Your First Instance (aka your cloud server)
+3. Install Zenbot**
 
 
 ## 1. Register AWS Account (need Credit/Debit Card)
