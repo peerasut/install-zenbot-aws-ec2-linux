@@ -71,10 +71,22 @@ But mongodb version should be 4.4 not 5.0 (if use version 5.0 the installation w
 **If you see the trading UI. You're good to go!**
 
 ## Use `screen` command to manage terminal sessions
-To be written...
+ - To check what screen you are in. [source](https://serverfault.com/questions/257975/how-to-check-if-im-in-screen-session)
+> 
+	 echo $STY
+ - 
+## etc.
 
-## Monitor your instance
-
- - To view storage left for your instance [source)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-describing-volumes.html)
+ - To view storage left for your instance [(source)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-describing-volumes.html)
 > 
     df -hT /dev/xvda1
+
+- Copy file from local to EC2 [(source)](https://dearsikandarkhan.medium.com/files-copying-between-aws-ec2-and-local-d07ed205eefa)
+
+On your local terminal, use secure copy command `scp` 
+>
+    scp -i path/to/keypair.pem /your/local/file/to/copy ec2username@ec2-xx-xx-xxx-xxx.compute-1.amazonaws.com:path/to/be/pasted
+- Copy file from EC2 to local
+>
+    scp -i path/to/keypair.pem user@ec2-xx-xx-xxx-xxx.compute-1.amazonaws.com:path/to/be-copied/file /your/local/directory/files/to/download
+You can opt out -i option to enter EC2 password when prompt.
