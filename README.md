@@ -1,3 +1,4 @@
+
 # Using Zenbot on AWS EC2 Linux
 
 There are 4 sections in order to use Zenbot on AWS:
@@ -83,10 +84,30 @@ But mongodb version should be 4.4 not 5.0 (if use version 5.0 the installation w
 
 - Copy file from local to EC2 [(source)](https://dearsikandarkhan.medium.com/files-copying-between-aws-ec2-and-local-d07ed205eefa)
 
-On your local terminal, use secure copy command `scp` 
+On your local terminal, use `scp` (secure copy) command  
 >
     scp -i path/to/keypair.pem /your/local/file/to/copy ec2username@ec2-xx-xx-xxx-xxx.compute-1.amazonaws.com:path/to/be/pasted
 - Copy file from EC2 to local
 >
     scp -i path/to/keypair.pem user@ec2-xx-xx-xxx-xxx.compute-1.amazonaws.com:path/to/be-copied/file /your/local/directory/files/to/download
 You can opt out -i option to enter EC2 password when prompt.
+
+- Secure your key pair with `chmod` command [(source)](https://www.howtogeek.com/437958/how-to-use-the-chmod-command-on-linux/)
+>
+    chmod nmo /path/to/keypair.pem
+ Where n, m, o is number for allow permission. Note that n is for you who own the file, m is for group permission and o is for other than the first two.
+-   0: (000) No permission.
+-   1: (001) Execute permission.
+-   2: (010) Write permission.
+-   3: (011) Write and execute permissions.
+-   4: (100) Read permission.
+-   5: (101) Read and execute permissions.
+-   6: (110) Read and write permissions.
+-   7: (111) Read, write, and execute permissions.
+
+For example, to make only you can read the file use
+>
+    chmod 400 /path/to/keypair.pem
+To check permission for a file (more info go to the  [source](https://www.howtogeek.com/437958/how-to-use-the-chmod-command-on-linux/))
+>
+    ls -l keypair.pem
