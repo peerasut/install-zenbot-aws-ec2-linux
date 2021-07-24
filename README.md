@@ -36,11 +36,20 @@ Follow the steps from [this YouTube link](https://www.youtube.com/watch?v=Qp4C6G
  - Install Nodejs
 > 
     sudo yum install nodejs
+   If yum says something like 'No package nodejs available' and it did not install nodejs do the following
+> 
+    sudo yum install -y gcc-c++ make
+```
+curl -sL https://rpm.nodesource.com/setup_14.x | sudo -E bash - 
+```
+Then, you can install Nodejs
+> 
+    sudo yum install nodejs
  - Verify nodejs, npm installed
 > 
     node -v
+> 
     npm -v
-
  - Install mongodb: please follow [mongodb website](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-amazon/)
 But mongodb version should be 4.4 not 5.0 (if use version 5.0 the installation will not be successful. idk why)
 - Verify mongodb installed
@@ -49,7 +58,6 @@ But mongodb version should be 4.4 not 5.0 (if use version 5.0 the installation w
 - Install git
 > 
     sudo yum install git
-    
     # verify git installed
     git --version
 **Follow these steps.**
@@ -81,6 +89,7 @@ But mongodb version should be 4.4 not 5.0 (if use version 5.0 the installation w
  - To view storage left for your instance [(source)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-describing-volumes.html)
 > 
     df -hT /dev/xvda1
+
 - Copy file from local to EC2 [(source)](https://dearsikandarkhan.medium.com/files-copying-between-aws-ec2-and-local-d07ed205eefa)
 
 On your local terminal, use `scp` (secure copy) command  
