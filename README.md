@@ -81,7 +81,6 @@ But mongodb version should be 4.4 not 5.0 (if use version 5.0 the installation w
  - To view storage left for your instance [(source)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-describing-volumes.html)
 > 
     df -hT /dev/xvda1
-
 - Copy file from local to EC2 [(source)](https://dearsikandarkhan.medium.com/files-copying-between-aws-ec2-and-local-d07ed205eefa)
 
 On your local terminal, use `scp` (secure copy) command  
