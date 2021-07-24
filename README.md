@@ -41,7 +41,7 @@ Follow the steps from [this YouTube link](https://www.youtube.com/watch?v=Qp4C6G
 > 
     npm -v
  - Install mongodb by follow [this mongodb link](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-amazon/)
-But mongodb version should be 4.4 not 5.0 (if use version 5.0 the installation will not be successful. idk why)
+For Linux ARM64 use [this link](https://dev.to/bobstrange/install-mongodb-to-arm64-amazon-linux-2-lon) to install mongodb and just use version 4.4 don't use 5.0
 - Verify mongodb installed
 > 
     mongo --version
@@ -109,4 +109,3 @@ For example, to make only you can read the file use
 To check permission for a file (more info go to the  [source](https://www.howtogeek.com/437958/how-to-use-the-chmod-command-on-linux/))
 >
     ls -l keypair.pem
-
