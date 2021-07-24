@@ -33,24 +33,14 @@ Follow the steps from [this YouTube link](https://www.youtube.com/watch?v=Qp4C6G
 ## Install Zenbot
 **Prerequisites:** 
 
- - Install Nodejs
-> 
-    sudo yum install nodejs
-   If yum says something like 'No package nodejs available' and it did not install nodejs do the following
-> 
-    sudo yum install -y gcc-c++ make
-```
-curl -sL https://rpm.nodesource.com/setup_14.x | sudo -E bash - 
-```
-Then, you can install Nodejs
-> 
-    sudo yum install nodejs
+ - Install Nodejs by follow [this aws tutorial link](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html)
+
  - Verify nodejs, npm installed
 > 
     node -v
 > 
     npm -v
- - Install mongodb: please follow [mongodb website](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-amazon/)
+ - Install mongodb by follow [this mongodb link](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-amazon/)
 But mongodb version should be 4.4 not 5.0 (if use version 5.0 the installation will not be successful. idk why)
 - Verify mongodb installed
 > 
@@ -119,3 +109,4 @@ For example, to make only you can read the file use
 To check permission for a file (more info go to the  [source](https://www.howtogeek.com/437958/how-to-use-the-chmod-command-on-linux/))
 >
     ls -l keypair.pem
+
