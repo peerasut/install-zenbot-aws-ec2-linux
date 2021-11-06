@@ -90,6 +90,11 @@ On your local terminal, use `scp` (secure copy) command
     scp -i path/to/keypair.pem user@ec2-xx-xx-xxx-xxx.compute-1.amazonaws.com:path/to/be-copied/file /your/local/directory/files/to/download
 You can opt out -i option to enter EC2 password when prompt.
 
+In case that you have already configured alias for that EC2 in ssh config. You can use that alias, for example,
+>
+    scp alias:path/to/be-copied/file /your/local/directory/files/to/download
+
+
 - Secure your key pair with `chmod` command [(source)](https://www.howtogeek.com/437958/how-to-use-the-chmod-command-on-linux/)
 >
     chmod nmo /path/to/keypair.pem
